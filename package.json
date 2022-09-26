@@ -1,0 +1,54 @@
+{
+    "name": "sof-project",
+    "version": "4.3.0",
+    "description": "Film downloader and Convertor",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sahat/hackathon-starter.git"
+    },
+    "author": "Sahat Yalkabov",
+    "license": "MIT",
+    "scripts": {
+        "start": "node app.js",
+        "test": "mocha --reporter spec",
+        "uglify": "uglifyjs public/jsx/main.js -c toplevel,sequences=false -o public/jsx/main.min.js",
+        "postinstall": "npm rebuild node-sass",
+        "eslint": "eslint **/*.js"
+    },
+    "dependencies": {
+        "@aws-sdk/client-s3": "^3.178.0",
+        "@aws-sdk/lib-storage": "^3.178.0",
+        "axios": "^0.27.2",
+        "crash-safe-write-file": "0.0.3",
+        "encodeurl": "^1.0.2",
+        "lodash": "^4.17.21",
+        "mongodb": "^4.9.0",
+        "node-redis": "^0.1.7",
+        "node-webcrawler": "^0.8.0",
+        "redis": "^4.3.0",
+        "url": "^0.11.0"
+    },
+    "devDependencies": {},
+    "eslintConfig": {
+        "extends": "airbnb-base",
+        "rules": {
+            "comma-dangle": 0,
+            "consistent-return": 0,
+            "no-param-reassign": 0,
+            "no-underscore-dangle": 0,
+            "no-shadow": 0,
+            "no-console": 0,
+            "no-plusplus": 0,
+            "no-unused-expressions": 0,
+            "chai-friendly/no-unused-expressions": 2
+        },
+        "env": {
+            "jasmine": true,
+            "mocha": true,
+            "node": true
+        },
+        "plugins": [
+            "chai-friendly"
+        ]
+    }
+}
